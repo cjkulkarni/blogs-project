@@ -1,7 +1,7 @@
 import './App.css';
-import { RouterLayout } from "./router/RouterLayout";
+import { RouterLayout, Layout, Home, Blogs, Contact } from "./router/RouterLayout";
 import Header from './componants/Header';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter,Route,Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -9,9 +9,17 @@ function App() {
       <div className="App">
         <BrowserRouter>
           
-               <Header />
-            <RouterLayout />
-             <Footer />
+          <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="blogs" element={<Blogs />} />
+                <Route path="contact" element={<Contact />} />
+           {/* <Route path="*" element={<NoPage />} /> */}
+            </Route>
+          </Routes>  
+          <Header/>
+          <Layout />
+          <Footer/>           
          
         </BrowserRouter>
       </div>
@@ -20,9 +28,10 @@ function App() {
 }
 
 
-
 const Footer = () => {
   return <h2>Footer</h2>
 }
+
+
 
 export default App;

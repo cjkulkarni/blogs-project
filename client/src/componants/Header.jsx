@@ -1,5 +1,4 @@
-import { Routes, Route, Link, Outlet } from "react-router-dom";
-import { Layout, Home, Blogs, Contact } from "../router/RouterLayout";
+import { Link, Outlet } from "react-router-dom";
 
 const Header = () => {
        setTimeout(() => {
@@ -8,14 +7,7 @@ const Header = () => {
 
     return (
         <>
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="blogs" element={<Blogs />} />
-                <Route path="contact" element={<Contact />} />
-           {/* <Route path="*" element={<NoPage />} /> */}
-            </Route>
-       </Routes>
+    
        
       <nav>
         <ul>

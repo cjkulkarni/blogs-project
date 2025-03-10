@@ -2,24 +2,22 @@
 const RouterLayout = () => {
      
     return (
-    <>
-       <h2>test in the routerlayout</h2>
-      
+      <>
+      <Layout/>
     </>
   );
 }
 
 const Layout = () => {
-    
-   
-          
+  console.log("printed once");
   return (
-      <>
-          this is layout
-       
-          
-    </>
-  )
+    <>
+    <h2>
+      this is layout
+    </h2>
+
+      </>
+  );
 };
 
 const Home = () => {
