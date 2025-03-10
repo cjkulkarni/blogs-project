@@ -1,24 +1,18 @@
+import Header from '../componants/Header';
+import { Outlet } from 'react-router-dom';
 
 const RouterLayout = () => {
      
     return (
-      <>
-      <Layout/>
-    </>
+      <div className='body'>
+        <Header />
+        <div className='page-wrap container mx-auto px-4 py-3'>
+          <Outlet /> 
+        </div>
+        <Footer />
+      </div>
   );
 }
-
-const Layout = () => {
-  console.log("printed once");
-  return (
-    <>
-    <h2>
-      this is layout
-    </h2>
-
-      </>
-  );
-};
 
 const Home = () => {
      
@@ -34,4 +28,7 @@ const Contact = () => {
   return <h1>contact</h1>;
 };
 
-export { RouterLayout,Layout,Home,Blogs,Contact };
+const Footer = () => {
+  return <h2 className="footer"> this is footer</h2>
+}
+export { RouterLayout,Home,Blogs,Contact };

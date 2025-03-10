@@ -1,8 +1,6 @@
 import express, { Request, Response, NextFunction } from "express";
 import createHttpError from "http-errors";
 import blogModel from "../model/blogModel";
-//import { config } from "../config/config";
-// import { Blog } from "../config/types";
 
 const blog = express.Router(); 
 
