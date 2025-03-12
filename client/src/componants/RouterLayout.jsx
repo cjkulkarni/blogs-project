@@ -1,4 +1,5 @@
-import Header from '../componants/Header';
+import Header from './common/Header';
+import Footer from "./common/Footer";
 import { Outlet } from 'react-router-dom';
 
 const RouterLayout = () => {
@@ -6,7 +7,7 @@ const RouterLayout = () => {
     return (
       <div className='body'>
         <Header />
-        <div className='page-wrap container mx-auto px-4 py-3'>
+        <div className='page-wrap mx-auto'>
           <Outlet /> 
         </div>
         <Footer />
@@ -14,10 +15,7 @@ const RouterLayout = () => {
   );
 }
 
-const Home = () => {
-     
-  return <h1>Home</h1>;
-};
+
 
 const Blogs = () => {
   console.log("this is test");
@@ -28,7 +26,5 @@ const Contact = () => {
   return <h1>contact</h1>;
 };
 
-const Footer = () => {
-  return <h2 className="footer"> this is footer</h2>
-}
-export { RouterLayout,Home,Blogs,Contact };
+
+export { RouterLayout,Blogs,Contact };
